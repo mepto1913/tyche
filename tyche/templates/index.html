@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Dashboard</h2>
+    </div>
+
+    <div style="margin-bottom: 2%">
+        <div class="row" style="margin: 1%">
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+
+                <!-- Card -->
+                <div class="card card-border border-dark shadow-lg mb-6 mb-md-8 mb-lg-0 lift lift-lg">
+                    <div onclick="location.href='{% url 'home' %}';" style="cursor: pointer;"
+                         class="card-body text-center">
+
+                        <!-- Icon -->
+                        <div class="icon-circle bg-primary text-white mb-5">
+                            <i class="fe fe-upload"></i>
+                        </div>
+
+                        <!-- Heading -->
+                        <h4 class="fw-bold">
+                            Manage Exams
+                        </h4>
+
+                        <!-- Text -->
+                        <p class="text-gray-700 mb-5">
+                            Neue Uploads sind nicht öffentlich da Maleware hochgeladen werden kann.
+                            Oder weil die angegebenen Daten inkorrekt sein könnten.
+                            Daher werden alle uploads ertmal von uns gecheckt.
+                        </p>
+
+                        <!-- Badge -->
+                        <span class="badge rounded-pill bg-dark-soft">
+                      <span class="h6 text-uppercase">
+                        {{ uploads_to_review_amount }} entries
+                      </span>
+                    </span>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+
+                <!-- Card -->
+                <div class="card card-border border-primary-desat shadow-lg mb-6 mb-md-8 mb-lg-0 lift lift-lg">
+                    <div onclick="location.href='{% url 'manage_classes' %}';" style="cursor: pointer;"
+                         class="card-body text-center">
+
+                        <!-- Icon -->
+
+                        <!-- Heading -->
+                        <h4 class="fw-bold">
+                            Klassen verwalten
+                        </h4>
+                        <p class="text-gray-700 mb-5">
+                            Füge neue Klassen hinzu, oder bearbeite existierende.
+                        </p>
+
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+
+                <!-- Card -->
+                <div class="card card-border border-dark shadow-lg mb-6 mb-md-8 mb-lg-0 lift lift-lg">
+                    <div onclick="location.href='{% url 'home' %}';" style="cursor: pointer;"
+                         class="card-body text-center">
+
+                        <!-- Icon -->
+                        <div class="icon-circle bg-danger text-white mb-5">
+                            <div
+                                    style="filter: invert(100%)"
+                                    data-lottie
+                                    data-lottie-hover
+                                    data-lottie-path="{% static '/assets/lottie/trashV2.json' %}">
+                            </div>
+                        </div>
+                        <!-- Heading -->
+                        <h4 class="fw-bold">
+                            View Deleted Exams
+                        </h4>
+
+                        <!-- Text -->
+                        <p class="text-gray-700 mb-5">
+                            Über die Zeit wurden uploads direkt dissaproved oder
+                            nach einem Report gelöscht.
+                            Hier kannst du dir diese Ungewollten Uploads ansehen.
+                        </p>
+
+                        <!-- Badge -->
+                        <span class="badge rounded-pill bg-dark-soft">
+                      <span class="h6 text-uppercase">
+                        {{ deleted_amount }} entries
+                      </span>
+                    </span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

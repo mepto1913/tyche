@@ -1,0 +1,59 @@
+:root{
+    --Protokoll-color: #dc5818;
+    --Klausur-color: #ca051c;
+    --Zusammenfassung-color: #0701b9;
+    --Exercise-color: #de21d3;
+    --Fragebogen-color: #50db10;
+    --Script-color: #7d24b7;
+}
+
+.background-Klausur{
+    background: var(--Klausur-color);
+}
+.background-Protokoll{
+    background: var(--Protokoll-color);
+}
+.background-Zusammenfassung{
+    background: var(--Zusammenfassung-color);
+}
+.background-Exercise{
+    background: var(--Exercise-color);
+}
+.background-Fragebogen{
+    background: var(--Fragebogen-color);
+}
+.background-Script{
+    background: var(--Script-color);
+}
+
+.color-indicator{
+    overflow: hidden;
+}
+
+.color-indicator::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 8px;
+    background-color: var(--Indicator-color);
+}
+.color-indicator-Protokoll{
+    --Indicator-color: var(--Protokoll-color);
+}
+.color-indicator-Klausur{
+    --Indicator-color: var(--Klausur-color);
+}
+.color-indicator-Zusammenfassung{
+    --Indicator-color: var(--Zusammenfassung-color);
+}
+.color-indicator-Exercise{
+    --Indicator-color: var(--Exercise-color);
+}
+.color-indicator-Fragebogen{
+    --Indicator-color: var(--Fragebogen-color);
+}
+.color-indicator-Script{
+    --Indicator-color: var(--Script-color);
+}

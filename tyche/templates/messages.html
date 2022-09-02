@@ -1,0 +1,13 @@
+{% load custom_tags %}
+{% load static %}
+
+<div id="messages">
+    {% if messages %}
+        {% for message in messages %}
+            {% map_message_lottie message.tags as path %}
+            <script>
+                create_message_toast("{{ message.tags }}", "{{ message }}", "{% static path %}" );
+            </script>
+        {% endfor %}
+    {% endif %}
+</div>

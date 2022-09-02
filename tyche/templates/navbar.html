@@ -1,0 +1,39 @@
+<nav class="navbar navbar-light navbar-expand-lg border-bottom mb-3"
+     style="z-index: 4;padding-left: 20px;padding-right: 20px;">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="{% url 'home' %}">
+        Tyche
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+        <!-- Navigation -->
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">
+                    Klassen
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">
+                    Klausuren
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</nav>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Klassen Verwalten</h2>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-primary d-flex align-items-center">
+            <div class="me-auto">Neue Klasse hinzufügen</div>
+            <div>
+                <div class="icon-circle bg-primary text-white mb-0">
+                    <i class="fe fe-plus-square"></i>
+                </div>
+            </div>
+        </li>
+        {% for class in object_list %}
+             <li class="list-group-item list-group-item-primary d-flex align-items-center">
+            <div class="me-auto">{{ class }}</div>
+            <div>
+                <div class="icon-circle bg-primary text-white mb-0">
+                    <i class="fe fe-plus-square"></i>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
