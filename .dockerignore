@@ -1,0 +1,4 @@
+/documents
+node_modules/
+src/db.sqlite3
+src/db.sqlite3.sample
